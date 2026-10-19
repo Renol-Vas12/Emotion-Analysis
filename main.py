@@ -104,9 +104,9 @@ async def lifespan(app: FastAPI):
         dl_model["Tokenizer"] = pickle.load(file)
     print('Model are loaded successfully...')   
 
-    yield #Pause, model is laoded and server is running and at this point model wait karega for request
+    yield #Pause, model is laoded and server is running and at this point model will wait  for the  request
 
-    dl_model.clear() #Ek baar server band ho gaya uske baad model ko memory se hata do.
+    dl_model.clear()
                
 
 """
